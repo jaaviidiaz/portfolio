@@ -1,0 +1,398 @@
+/* ===== VARIABLES: colores y medidas que se repiten ===== */
+:root {
+    --fondo: #0f1115;
+    --fondo-tarjeta: #181a20;
+    --borde: #2a2d35;
+    --texto: #e6e6e6;
+    --texto-suave: #a3a7b0;
+    --acento: #4f9dff;
+    --radio: 10px;
+    --ancho-max: 960px;
+}
+
+/* ===== BASE ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--acento);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CABECERA ===== */
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: rgba(15, 17, 21, 0.95);
+    border-bottom: 1px solid var(--borde);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--texto);
+}
+
+.logo span {
+    color: var(--acento);
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu a {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: var(--texto);
+    text-decoration: none;
+}
+
+/* Botón hamburguesa: oculto en ordenador */
+.menu-boton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+}
+
+.menu-boton span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--texto);
+}
+
+/* ===== CONTENIDO ===== */
+main {
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.seccion {
+    padding: 4rem 0 1rem;
+    scroll-margin-top: 60px; /* para que la cabecera fija no tape el título */
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: 0.4rem;
+    background: var(--acento);
+    border-radius: 2px;
+}
+
+.seccion > p {
+    color: var(--texto-suave);
+    margin-bottom: 1rem;
+    max-width: 65ch;
+}
+
+/* ===== PRESENTACIÓN (HERO) ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 5rem 0 3rem;
+}
+
+.hero-foto {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid var(--acento);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.hero-saludo {
+    color: var(--acento);
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+}
+
+.hero-rol {
+    font-size: 1.15rem;
+    color: var(--texto);
+    margin: 0.4rem 0 1rem;
+}
+
+.hero-texto {
+    color: var(--texto-suave);
+    max-width: 55ch;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+/* ===== BOTONES ===== */
+.boton {
+    display: inline-block;
+    padding: 0.65rem 1.3rem;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    color: var(--texto);
+    font-weight: 600;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.boton:hover {
+    border-color: var(--acento);
+    text-decoration: none;
+}
+
+.boton-principal {
+    background: var(--acento);
+    border-color: var(--acento);
+    color: #0f1115;
+}
+
+.boton-principal:hover {
+    background: #79b4ff;
+}
+
+/* ===== TARJETAS ===== */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+
+.tarjetas-tech {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.tarjeta {
+    background: var(--fondo-tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 1.3rem;
+}
+
+.tarjeta h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+}
+
+.proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.proyecto p {
+    color: var(--texto-suave);
+    flex-grow: 1;
+}
+
+.proyecto-enlaces {
+    display: flex;
+    gap: 1.2rem;
+    font-weight: 600;
+}
+
+.estado {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #f0b429;
+    border: 1px solid #f0b429;
+    border-radius: 999px;
+    padding: 0.1rem 0.6rem;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+}
+
+/* Etiquetas de tecnologías */
+.etiquetas {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.etiquetas li {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    background: #23262e;
+    color: var(--texto);
+}
+
+.etiquetas-nuevas li {
+    background: transparent;
+    border: 1px dashed var(--acento);
+}
+
+/* ===== SOBRE MÍ ===== */
+.lista-enfoque {
+    margin: 0 0 1rem 1.2rem;
+    color: var(--texto-suave);
+}
+
+.lista-enfoque li {
+    margin-bottom: 0.3rem;
+}
+
+.lista-enfoque li::marker {
+    color: var(--acento);
+}
+
+/* ===== LÍNEA DE TIEMPO (formación) ===== */
+.linea-tiempo {
+    list-style: none;
+    border-left: 2px solid var(--borde);
+    padding-left: 1.5rem;
+}
+
+.linea-tiempo li {
+    position: relative;
+    margin-bottom: 1.8rem;
+}
+
+/* Punto azul en la línea */
+.linea-tiempo li::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.5rem - 7px);
+    top: 0.35rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--acento);
+}
+
+.fecha {
+    font-size: 0.85rem;
+    color: var(--acento);
+    font-weight: 600;
+}
+
+.linea-tiempo h3 {
+    font-size: 1.05rem;
+}
+
+.linea-tiempo p {
+    color: var(--texto-suave);
+}
+
+/* ===== CONTACTO ===== */
+.contacto-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.ubicacion {
+    color: var(--texto-suave);
+}
+
+/* ===== PIE ===== */
+.pie {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+/* ===== MÓVIL ===== */
+@media (max-width: 720px) {
+    .menu-boton {
+        display: block;
+    }
+
+    /* El menú se convierte en un desplegable */
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--fondo);
+        border-bottom: 1px solid var(--borde);
+    }
+
+    .menu.abierto {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 0.9rem 1.5rem;
+        border-top: 1px solid var(--borde);
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 3rem;
+        gap: 1.5rem;
+    }
+
+    .hero-texto {
+        margin: 0 auto;
+    }
+
+    .hero-botones {
+        justify-content: center;
+    }
+
+    .hero-foto {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* Si el usuario prefiere menos movimiento, quitamos el scroll suave */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}

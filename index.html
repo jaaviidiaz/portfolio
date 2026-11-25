@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Javier Díaz Rodríguez, estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM) en Málaga.">
+    <title>Javier Díaz · Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABECERA con menú de navegación -->
+    <header class="cabecera">
+        <a href="#inicio" class="logo">JD<span>.</span></a>
+
+        <!-- Botón que solo se ve en móvil para abrir/cerrar el menú -->
+        <button class="menu-boton" id="menuBoton" aria-label="Abrir menú" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" id="menu">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#tecnologias">Tecnologías</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#formacion">Formación</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PRESENTACIÓN -->
+        <section class="hero" id="inicio">
+            <img src="https://github.com/jaaviidiaz.png" alt="Foto de Javier Díaz" class="hero-foto" width="160" height="160">
+            <div>
+                <p class="hero-saludo">Hola, soy</p>
+                <h1>Javier Díaz Rodríguez</h1>
+                <p class="hero-rol">Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM)</p>
+                <p class="hero-texto">
+                    Me gusta construir interfaces limpias y usables y estructurar bien la lógica de las aplicaciones.
+                    Ahora mismo busco <strong>prácticas</strong> donde aportar desde el primer día.
+                </p>
+                <div class="hero-botones">
+                    <a href="#proyectos" class="boton boton-principal">Ver proyectos</a>
+                    <a href="#contacto" class="boton">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ / EN QUÉ ME QUIERO ENFOCAR -->
+        <section class="seccion" id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>
+                Estudio el Técnico Superior en DAM en <strong>Davante Medac Nova</strong> (Málaga).
+                Me interesa seguir creciendo en el desarrollo de aplicaciones y software, sobre todo en:
+            </p>
+            <ul class="lista-enfoque">
+                <li>Interfaces web cuidando la usabilidad y la estructura del código.</li>
+                <li>Aplicaciones multiplataforma.</li>
+                <li>Trabajo con bases de datos.</li>
+            </ul>
+            <p>
+                Busco un equipo técnico del que aprender y retos reales en los que trabajar con constancia,
+                en equipo y aprendiendo cada día.
+            </p>
+        </section>
+
+        <!-- TECNOLOGÍAS agrupadas por tipo -->
+        <section class="seccion" id="tecnologias">
+            <h2>Tecnologías</h2>
+            <div class="tarjetas tarjetas-tech">
+                <article class="tarjeta">
+                    <h3>Lenguajes</h3>
+                    <ul class="etiquetas">
+                        <li>Java</li>
+                        <li>Kotlin</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+                <article class="tarjeta">
+                    <h3>Frontend</h3>
+                    <ul class="etiquetas">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
+                </article>
+                <article class="tarjeta">
+                    <h3>Bases de datos</h3>
+                    <ul class="etiquetas">
+                        <li>MySQL</li>
+                        <li>SQL</li>
+                    </ul>
+                </article>
+                <article class="tarjeta">
+                    <h3>Herramientas</h3>
+                    <ul class="etiquetas">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Linux</li>
+                        <li>Odoo</li>
+                    </ul>
+                </article>
+                <article class="tarjeta">
+                    <h3>Aprendiendo ahora</h3>
+                    <ul class="etiquetas etiquetas-nuevas">
+                        <li>Python</li>
+                        <li>Spring Boot</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section class="seccion" id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="tarjetas">
+                <article class="tarjeta proyecto">
+                    <h3>GamerZone</h3>
+                    <p>
+                        Web de una tienda de componentes gaming: tienda, comparativa y ranking de componentes,
+                        presupuesto, blog de noticias, FAQ y contenido multimedia.
+                    </p>
+                    <ul class="etiquetas">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <div class="proyecto-enlaces">
+                        <a href="https://github.com/jaaviidiaz/GamerZone" target="_blank" rel="noopener">Repositorio</a>
+                        <a href="https://jaaviidiaz.github.io/GamerZone/" target="_blank" rel="noopener">Demo</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta proyecto">
+                    <h3>Portfolio personal</h3>
+                    <p>
+                        Esta misma web: una página adaptada a móvil y ordenador con mis tecnologías,
+                        proyectos y datos de contacto.
+                    </p>
+                    <ul class="etiquetas">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <div class="proyecto-enlaces">
+                        <a href="https://github.com/jaaviidiaz/portfolio" target="_blank" rel="noopener">Repositorio</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta proyecto">
+                    <h3>Signia <span class="estado">En proceso</span></h3>
+                    <p>
+                        Propuesta de aplicación de traducción bidireccional en tiempo real
+                        de lengua de signos a voz con avatar 3D.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- FORMACIÓN, EXPERIENCIA E IDIOMAS -->
+        <section class="seccion" id="formacion">
+            <h2>Formación y experiencia</h2>
+            <ol class="linea-tiempo">
+                <li>
+                    <span class="fecha">01/2026 – 03/2026</span>
+                    <h3>Prácticas en OpenWebinars</h3>
+                    <p>Trabajando con Java, HTML, CSS, MySQL, SQL y Git.</p>
+                </li>
+                <li>
+                    <span class="fecha">En curso</span>
+                    <h3>T.S. en Desarrollo de Aplicaciones Multiplataforma</h3>
+                    <p>Davante Medac Nova (Málaga).</p>
+                </li>
+                <li>
+                    <span class="fecha">Certificaciones</span>
+                    <h3>OpenWebinars</h3>
+                    <p>Administración de BBDD con MySQL (DDL y DML), SQL desde cero, Git, Java intermedio, HTML5 y CSS3.</p>
+                </li>
+                <li>
+                    <span class="fecha">Idiomas</span>
+                    <h3>Inglés B2 (Trinity 2024) y francés básico</h3>
+                </li>
+            </ol>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="seccion" id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes una oferta de prácticas o quieres comentarme algo? Escríbeme.</p>
+            <div class="contacto-enlaces">
+                <a href="mailto:diazrodjavier@gmail.com" class="boton boton-principal">diazrodjavier@gmail.com</a>
+                <a href="https://www.linkedin.com/in/javier-dr123" target="_blank" rel="noopener" class="boton">LinkedIn</a>
+                <a href="https://github.com/jaaviidiaz" target="_blank" rel="noopener" class="boton">GitHub</a>
+            </div>
+            <p class="ubicacion">📍 Málaga, España</p>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <p>© <span id="anio"></span> Javier Díaz Rodríguez</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
